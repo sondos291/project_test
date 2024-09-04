@@ -1,10 +1,10 @@
 from django.urls import path ,include
 from rest_framework.routers import DefaultRouter
-from .views import OwnerViewSet
+from .views import OwnerCreateView
 
-router=DefaultRouter()
-router.register(r'owner',OwnerViewSet)
-
-urlpatterns=[
-    path('',include(router.urls))
-]
+urlpatterns = [
+    path('createowner/', OwnerCreateView.as_view(), name='user-signup'),
+    
+    
+    ]
+   

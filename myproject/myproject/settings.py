@@ -57,6 +57,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'resturant.permissions.IsAdminUser',  # Path to your custom permission class
+    ],
 }
 from datetime import timedelta
 SIMPLE_JWT = {
